@@ -1,0 +1,27 @@
+{
+  "name": "carousel-web-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosvalentindiazFernan/carousel-web-components.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "bugs": {
+    "url": "https://github.com/carlosvalentindiazFernan/carousel-web-components/issues"
+  },
+  "homepage": "https://github.com/carlosvalentindiazFernan/carousel-web-components#readme"
+}
