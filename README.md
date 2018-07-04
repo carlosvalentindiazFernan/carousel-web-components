@@ -1,4 +1,4 @@
-# Webapp social
+# Carousel Web Components
 
 ### Setup
 
