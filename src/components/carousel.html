@@ -32,7 +32,7 @@
       button{
         padding: 10px;
         border: none;
-        background: var(--primary-color);
+        background: var(--accent-color);
         font-size: 13px;
         color: white;
         cursor: pointer;
@@ -53,8 +53,8 @@
           <img src="/src/img/a.jpg">
         </div>
         <div class="button-section">
-          <button class="fa fa-chevron-left">next</button>
-          <button class="fa fa-chevron-right" >prev</button>    
+          <button id="btn-next">next</button>
+          <button id="btn-prev">prev</button>    
         </div>
       </div>
       
@@ -91,6 +91,24 @@
               "title": ""
             }
           ]
+        }
+
+               
+        connectedCallback() {
+
+          this.shadowRoot.querySelector('#btn-next')
+            .addEventListener('click', this._nextImage());
+
+          this.shadowRoot.querySelector('btn-prev')
+          .addEventListener('click',this._prevImage());
+        }          
+        
+        _nextImage(){
+          console.log("this is a next ");
+        }
+
+        _prevImage(){
+          console.log("This is a prev");
         }
 
       }
