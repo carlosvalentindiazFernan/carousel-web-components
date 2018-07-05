@@ -99,16 +99,17 @@
               "src": "http://cdn.warnerestrenos.com/res/series/flash2017/header/header_minisite_big.jpg",              
             },
             {
-              "type": "img",
-              "src": "https://www.dccomics.com/sites/default/files/Movies-Gallery_JusticeLeague2017_FL_59f8bed150a0a5.18542669.jpg",              
+              "type": "video",
+              "src": "https://www.youtube.com/embed/WNxSJpKsdDc",              
             }
 
           ];
           this._count = this._db.length;
-          
+
         }
+        
         connectedCallback() {
-               
+          
           this.shadowRoot.querySelector('#btn-next')
             .addEventListener('click', this._nextImage.bind(this));
           this.shadowRoot.querySelector("#btn-prev")
@@ -194,6 +195,7 @@
               box.parentNode.removeChild(item);
             }
         }
+
         nextImage(){
           console.log("demos");
         }
