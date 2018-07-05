@@ -1,4 +1,5 @@
 
+
 <template id="carousel-elememt">
     <style>
       :host{
@@ -8,76 +9,60 @@
             --light-primary-color: #B2DFDB;
             --text-primary-color: #212121;
             --accent-text-color: #757575;
-      }        
-                
-      .slider_right_arrow::after {
-        content: "";
-        display: block;
-        height: 4px;
-        width: 40px;
-        background: darkgray;
-        transition: 0.5s ease;
-        transform: translate(19px,19px) rotate(90deg);
-      }
-        
-      .slider_left_arrow::after {
-        content: "";
-        display: block;
-        height: 4px;
-        width: 40px;
-        background: darkgray;
-        transition:0.5s ease;
-        transform: translate(19px, -19px) rotate(90deg);
-      }
-        
-      .slider_arrow_wrapper {
-        width: 40px;
-        height: 40px;
-        position: relative;
-        top: 160px;
-      }
-        
-      .slider_arrow_wrapper:hover .slider_right_arrow{
-        transform: rotate(45deg) scale(1.2);
-        background: orange;
+      } 
+
+      img{
+			  width: 100%;
+			  height: 100%;
       }
       
-      .slider_arrow_wrapper:hover .slider_right_arrow::after{
-        background: orange;
-      }
-        
-      .slider_arrow_wrapper:hover .slider_left_arrow{
-        transform: rotate(135deg) scale(1.2);
-        background: orange;
+      section{
+        display: flex;
+        justify-content: center;
       }
 
-      .slider_arrow_wrapper:hover .slider_left_arrow::after{
-        background: orange;
+      #slider{
+        width: 50%;
+        height:50%;
+        position: relative;
+        border: 1em solid white;
+        box-shadow: 0px 0px 5px 2px #9E9E9E;
       }
+
+      button{
+        padding: 10px;
+        border: none;
+        background: var(--primary-color);
+        font-size: 13px;
+        color: white;
+        cursor: pointer;
+      }
+
+
+      .button-section{
+        display: flex;
+        justify-content: space-around;
+        margin-top: -2.2em;
+      }
+
     </style>
-    <div id="slider" style="width: 75vw; margin: auto">
-      <div>
-        <img src="https://images.unsplash.com/photo-1494249465471-5655b7878482?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=191559dc1cae3f8967d568dfd8a77093&auto=format&fit=crop&w=500&q=60" width="100%" alt="">
-        <h3>Dolor 0</h3>
-        Dolor ipsum
+
+    <section>
+      <div id="slider">
+        <div id="box">
+          <img src="/src/img/a.jpg">
+        </div>
+        <div class="button-section">
+          <button class="fa fa-chevron-left">next</button>
+          <button class="fa fa-chevron-right" >prev</button>    
+        </div>
       </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1495512013490-788f7d7f4dbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=18c590641e6995047e1c04c54b43162e&auto=format&fit=crop&w=582&q=80" width="100%" alt="">
-        <h3>Dolor 1</h3>
-        Dolor ipsum
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1494249465471-5655b7878482?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=191559dc1cae3f8967d568dfd8a77093&auto=format&fit=crop&w=500&q=60" width="100%" alt="">
-        <h3>Dolor 2</h3>
-        Dolor ipsum
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ed00b15f4a07d72c600bf35b46299bb&auto=format&fit=crop&w=1350&q=80" width="100%" alt="">
-        <h3>Dolor 3</h3>
-        Dolor ipsum
-      </div>
-    </div>
-  </template>
+      
+    </section>
+
+
+
+</template>
   
   <script>
     (function CarouselComponent(customElements, document) {
